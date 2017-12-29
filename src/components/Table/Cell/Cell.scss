@@ -1,0 +1,9 @@
+@import '~@utils/color.scss';
+
+.container {
+  text-align: center;
+  border-right: 1px solid $gray2;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; 
+}

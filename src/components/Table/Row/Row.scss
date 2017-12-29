@@ -1,0 +1,10 @@
+@import '~@utils/color.scss';
+
+.container {
+  display: flex;
+  display: -webkit-flex;
+  & > div:last-child {
+    border: none;
+  }
+  border-bottom: 1px solid $gray2;
+}

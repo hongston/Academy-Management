@@ -1,0 +1,8 @@
+@import '~@utils/color.scss';
+
+.container {
+  flex: 1;
+  height: 100px;
+  background-color: green;
+  border-right: 1px solid $gray2;
+}

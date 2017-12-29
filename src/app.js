@@ -6,6 +6,7 @@ import { Provider } from 'react-redux';
 import { configureStore } from './redux';
 
 import '@utils/global.scss';
+import 'antd/dist/antd.css';
 import Routes from './routes';
 
 let store = configureStore();
