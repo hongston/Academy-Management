@@ -1,0 +1,29 @@
+@import '~@utils/color.scss';
+
+.container {
+  width: 400px;
+  height: 300px;
+  margin: 0 auto;
+  border-radius: 10px;
+  padding: 50px 0px;
+  .loginForm {
+    height: 200px;
+    padding: 50px 20px;
+    box-sizing: border-box;
+    .inputContainer {
+      margin: 10px;
+    }
+    .loginBtn {
+      background-color: $blue;
+      color: white;
+      height: 30px;
+      width: 340px;
+      border-radius: 5px;
+      display: block;
+      margin: 0 auto;
+      &:hover {
+        background-color: $blue2;
+      }
+    }
+  }
+}
