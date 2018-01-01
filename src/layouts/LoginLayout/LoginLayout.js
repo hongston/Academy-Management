@@ -1,7 +1,9 @@
 import React from 'react';
+import { connect } from 'react-redux';
 
 import styles from './LoginLayout.scss';
 import Login from '@components/Login/Login';
+import { login } from '@redux/actions/workerActions';
 
 const Container = (props) => <div className={styles.container}>{props.children}</div>;
 
@@ -20,8 +22,13 @@ class LoginLayout extends React.Component {
       [attr]: data
     }), () => console.log(attr, data));
   }
-  _handleLogin() {
-    // login test
+  _handleLogin(e) {
+    e.preventDefault();
+    const params = {
+      id: this.state.id,
+      password: this.state.password
+    }
+    this.props.login(params);
   }
   render() {
     return (
@@ -35,4 +42,7 @@ class LoginLayout extends React.Component {
     );
   }
 }
-export default LoginLayout;
+const mapDispatchToProps = (dispatch) => ({
+  login: (params) => dispatch(login(params))
+})
+export default connect(null, mapDispatchToProps)(LoginLayout);
