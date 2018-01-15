@@ -1,3 +1,15 @@
+@import '~@utils/color.scss';
+
 .container {
   flex: 1;
+  .menuTitle {
+    width: 100px;
+    height: 40px;
+    line-height: 40px;
+    box-sizing: border-box;
+    text-align: center;
+    display: inline-block;
+    color: white;
+    cursor: pointer;
+  }
 }
