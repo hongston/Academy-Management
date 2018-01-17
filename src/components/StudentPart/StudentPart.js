@@ -1,12 +1,12 @@
 import React from 'react';
 import { List } from 'immutable';
-import { Input, Icon, Modal, Button, DatePicker } from 'antd';
+import { Input, Icon, Modal, Button, DatePicker, Select } from 'antd';
+const Option = Select.Option;
 import { Table, Column } from '@components/Table/Table';
 import moment from 'moment';
 
 import styles from './StudentPart.scss';
 const Container = (props) => <div className={styles.container}>{props.children}</div>;
-const FontContainer = (props) => <div className={styles.fontContainer}>{props.children}</div>;
 const Form = (props) => <div className={styles.form}>{props.children}</div>;
 const FormItem = (props) => <div className={styles.formItem}>{props.children}</div>;
 const Text = (props) => <div className={styles.text}>{props.children}</div>;
@@ -24,6 +24,7 @@ const StudentPart = (props) => {
       <Modal
         title="학생등록"
         visible={props.studentInfo.get("modalVisible")}
+        closable={false}
         footer={[
           <Button key="register" type="primary" onClick={props.onRegisterStudent}>등록</Button>,
           <Button key="cancel" onClick={() => props.onUpdateState("studentInfo", ["modalVisible"], false)}>취소</Button>
@@ -76,19 +77,17 @@ const StudentPart = (props) => {
           <FormItem>
             <Text>상태</Text>
             <InputContainer>
-              <Input />
+              <Select defaultValue="0" className={styles.studentStateSelect}>
+                <Option value="0">재원생</Option>
+                <Option value="1">예비생</Option>
+                <Option value="2">휴원생</Option>
+              </Select>
             </InputContainer>
           </FormItem>
           <FormItem>
             <Text>등록일</Text>
             <InputContainer>
               <DatePicker defaultValue={moment()} format={'YYYY-MM-DD'}/>
-            </InputContainer>
-          </FormItem>
-          <FormItem>
-            <Text>수납상태</Text>
-            <InputContainer>
-              <Input />
             </InputContainer>
           </FormItem>
           <FormItem>
