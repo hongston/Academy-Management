@@ -11,6 +11,7 @@ const Form = (props) => <div className={styles.form}>{props.children}</div>;
 const FormItem = (props) => <div className={styles.formItem}>{props.children}</div>;
 const Text = (props) => <div className={styles.text}>{props.children}</div>;
 const InputContainer = (props) => <div className={styles.inputContainer}>{props.children}</div>;
+
 const StudentPart = (props) => {
   return (
     <Container>

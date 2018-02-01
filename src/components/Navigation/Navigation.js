@@ -1,14 +1,26 @@
 import React from 'react';
 import { Menu, Dropdown, Icon } from 'antd';
+import TeacherPart from '@components/TeacherPart/TeacherPart';
 
 import styles from './Navigation.scss';
 
 const Container = (props) => <div className={styles.container}>{props.children}</div>;
 const MenuTitle = (props) => <div className={styles.menuTitle}>{props.text}</div>;
-function onClick() {
-  alert("click");
+
+
+
+function onClick(e) {
+  switch (e.key) {
+    case "teacher:1" :  <TeacherPart/>  // 모달을 visible하고 싶은데, 다른 클래스를 어떻게 접근 해야 할지 모르겠다.ㅠ
+        break;
+    default :  alert("click");
+  }
 }
+
+
 const Navigation = (props) => {
+
+
   const StudentMenu = () => (
     <Menu onClick={onClick}>
       <Menu.Item key="student:1">학생정보</Menu.Item>
