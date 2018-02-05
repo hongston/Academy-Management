@@ -13,7 +13,6 @@ const reducer = (state = initState, action) => {
   switch(action.type) {
     case sectionActions.APPEND_SECTION:
       if(!state.get("section1")) {
-
       }
       else if(!state.get("section2")) {
       }

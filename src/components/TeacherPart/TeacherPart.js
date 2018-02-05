@@ -7,44 +7,6 @@ import moment from 'moment';
 
 import styles from './TeacherPart.scss';
 
-/*이메일 input*/
-
-const EmailOption = AutoComplete.Option;
-
-class Complete extends React.Component {
-  state = {
-    result: [],
-  }
-
-  handleSearch = (value) => {
-    let result;
-    if (!value || value.indexOf('@') >= 0) {
-      result = [];
-    } else {
-      result = ['gmail.com', 'hanmail.net', 'naver.com'].map(domain => `${value}@${domain}`);
-    }
-    this.setState({ result });
-  }
-
-  render() {
-    const { result } = this.state;
-    const children = result.map((email) => {
-      return <EmailOption key={email}>{email}</EmailOption>;
-    });
-    return (
-      <AutoComplete
-        style={{ width: 200 }}
-        onSearch={this.handleSearch}
-        placeholder="이메일 입력"
-      >
-        {children}
-      </AutoComplete>
-    );
-  }
-}
-/*이메일 input 종료 */
-
-
 const Container = (props) => <div className={styles.container}>{props.children}</div>;
 const Form = (props) => <div className={styles.form}>{props.children}</div>;
 const FormItem = (props) => <div className={styles.formItem}>{props.children}</div>;
