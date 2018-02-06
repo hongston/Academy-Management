@@ -2,7 +2,7 @@
 {
   "editor.tabSize": 2,
   "editor.folding": false,
-  "window.zoomLevel": 0,
+  "window.zoomLevel": 1,
   "workbench.activityBar.visible": false,
   "workbench.statusBar.visible": true,
   "editor.minimap.enabled": false

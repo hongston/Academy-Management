@@ -15,6 +15,16 @@ const PageTitle = (props) => {
           onClick={props.onCloseClick}>
           <Icon type="close" />
         </Button>
+        <Button
+          className={styles.closeBtn}
+          onClick={props.onCloseClick}>
+          <Icon type="edit" />
+        </Button>
+        <Button
+          className={styles.closeBtn}
+          onClick={props.onCloseClick}>
+          <Icon type="profile" />
+        </Button>
       </Title>
     </Container>
   )

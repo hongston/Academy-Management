@@ -3,6 +3,8 @@ import { call, put, takeEvery, takeLatest } from 'redux-saga/effects';
 import { sectionSagaActions, sectionActions } from '@redux/actions/sectionActions';
 
 import StudentInfo from '@containers/StudentInfo/StudentInfo';
+import TeacherInfo from '@containers/TeacherInfo/TeacherInfo';
+import ClassInfo from '@containers/ClassInfo/ClassInfo';
 
 const Components = {
   "학생정보": <StudentInfo />,
@@ -17,7 +19,7 @@ const Components = {
   "강사별강좌": <div>강사별강좌</div>,
   "상담기록": <div>수강강좌</div>,
   "강의교재": <div>강의교재</div>,
-  "강좌정보": <div>강좌정보</div>,
+  "강좌정보": <ClassInfo />,
   "출결": <div>출결</div>,
   "상담": <div>상담</div>,
   "테스트": <div>테스트</div>,
@@ -39,7 +41,7 @@ const Components = {
   "강좌별회계": <div>회계</div>,
   "강사별": <div>강사별</div>,
   "학년별": <div>학년별</div>,
-  "강사정보": <div>강사정보</div>,
+  "강사정보": <TeacherInfo />,
   "상담": <div>상담</div>,
   "강사테스트": <div>테스트</div>,
   "강좌": <div>강좌</div>,
