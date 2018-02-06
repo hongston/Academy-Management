@@ -9,9 +9,9 @@ class Content extends React.Component {
   render() {
     return (
       <Container>
-        <Section />
-        <Section />
-        <Section />
+        <Section section={this.props.section1}/>
+        <Section section={this.props.section2}/>
+        <Section section={this.props.section3}/>
       </Container>
     )
   }

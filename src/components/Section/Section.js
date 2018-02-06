@@ -6,6 +6,9 @@ const Container = (props) => <div className={styles.container}>{props.children}<
 const Section = (props) => {
   return (
     <Container>
+      {props.section
+      ? props.section.get("component")
+      : null}
     </Container>
   )
 }

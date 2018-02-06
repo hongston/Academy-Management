@@ -1,0 +1,33 @@
+.form {
+  .formItem {
+    display: flex;
+    display: -webkit-flex;
+    margin-bottom: 10px;
+    .text {
+      width: 120px;
+      height: 35px;
+      line-height: 35px;
+      text-align: right;
+      padding: 0px 20px;
+    }
+    .inputContainer {
+      flex: 1px;
+      height: 35px;
+      & > input {
+        height: 100%;
+      }
+      .birthYear {
+        width: 33%;
+      }
+      .birthMonth {
+        width: 33%;
+      }
+      .birthDay {
+        width: 33%;
+      }
+      .studentStateSelect {
+        width: 100%;
+      }
+    }
+  }
+}

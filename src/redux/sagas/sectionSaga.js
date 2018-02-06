@@ -1,9 +1,11 @@
+import React from 'react';
 import { call, put, takeEvery, takeLatest } from 'redux-saga/effects';
+import { sectionSagaActions, sectionActions } from '@redux/actions/sectionActions';
 
-import { sectionSagaActions } from '@redux/actions/sectionActions';
+import StudentInfo from '@containers/StudentInfo/StudentInfo';
 
 const Components = {
-  "학생정보": <div>학생정보</div>,
+  "학생정보": <StudentInfo />,
   "수강강좌": <div>수강강좌</div>,
   "수납이력": <div>수납이력</div>,
   "출결상황": <div>출결상황</div>,
@@ -52,7 +54,9 @@ const Components = {
 function* AppendSection(action) {
   const { sectionName } = action;
   yield put({
-    type: 
+    type: sectionActions.APPEND_SECTION,
+    sectionName,
+    component: Components[sectionName]
   })
 }
 export function* preAppendSection() {
