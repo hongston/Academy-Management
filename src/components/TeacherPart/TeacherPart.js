@@ -47,7 +47,7 @@ const TeacherPart = (props) => {
           <FormItem>
             <Text>이메일</Text>
             <InputContainer>
-              <Complete />
+              <Complete width='100%' placeholder="이메일"/>
             </InputContainer>
           </FormItem>
           <FormItem>

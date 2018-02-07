@@ -24,6 +24,7 @@ const Components = {
   "상담": <div>상담</div>,
   "테스트": <div>테스트</div>,
   "진도": <div>진도</div>,
+  "숙제": <div>숙제</div>,
   "결석생": <div>결석생</div>,
   "휴원생": <div>휴원생</div>,
   "수강료": <div>수강료</div>,

@@ -34,6 +34,7 @@ const LessonMenu = (props) => (
     <Menu.Item key="상담">상담</Menu.Item>
     <Menu.Item key="테스트">테스트</Menu.Item>
     <Menu.Item key="진도">진도</Menu.Item>
+    <Menu.Item key="숙제">숙제</Menu.Item>   
     <Menu.Item key="결석생">결석생</Menu.Item>
     <Menu.Item key="휴원생">휴원생</Menu.Item>
   </Menu>
